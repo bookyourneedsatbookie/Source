@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+
+}
+
+.terf-selection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.terf {
+  align-items: first baseline;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.terf-poster {
+  border-radius: 20px;
+  height: 300px;
+}
+
+.terf-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.slot-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slot-selection .slot {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0, 2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slot-selection .slot:hover {
+  transform: scale(1.05);
+  box-shadow: opx 0px 20px rgba(0, 0, 0, 0, 0.3);
+}
+
+.slot-selection .slot.selected {
+  background-color: green !important;
+  color: white;
+  border-radius: 23px;
+}
+
+.slot-selection .slot {
+  background-color: white;
+  color: #000;
+  padding: 7px 10px;
+}
+
+.slot-selection .slot.unavailable {
+  background-color: red;
+  color: #444;
+  cursor: not-allowed;
+}
+
+.slot-selection .slot-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.slot-selection .slot-date {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.slot-selection .slot-seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slot-selection .slot-seats .seat {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0, 2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slot-selection .slot-seats .seat.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.slot-selection .slot-seats .seat.slot:not(.available) {
+  background-color: #ccc;
+  color: #444;
+  cursor: not-allowed;
+}
+
+.payment-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-button:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+.loader {
+  align-content: center;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side, #000 94%, #0000) right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+}
+
+.loader::before {
+  content: "Bookie";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes l24 {
+  100% {
+    background-position: left
+  }
+}
+
+.loader_model .model-content {
+  background-color: unset !important;
+  border: unset !important;
+  align-items: center !important;
+  background: unset !important;
+}
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  color: #0000;
+  background: linear-gradient(90deg, orange calc(50% + 0.5ch),#000 0) right/calc(200% + 1ch) 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: l7 1s infinite steps(11);
+}
+.loader:before {
+  content: "Bookie...";
+} */
+@keyframes l7 {to{background-position: left}}
